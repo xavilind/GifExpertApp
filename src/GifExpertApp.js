@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 
 
 import './index.css';
-
+import { AddCategory } from './components/AddCategory';
 
 export const GiftExpertApp = () => {
 
-    //const categories = ['Demon Slayer', 'One punch', 'Attack on Titan'];
+
     const [categories, setCategories] = useState(['Pokemon', 'Spider Man', 'Power Rangers']);
 
-    const handleAdd = () => {
-        setCategories( [...categories, 'Simpson'] );
-    }
+    //const handleAdd = () => {
+      //  setCategories( [...categories, 'Simpson'] );
+    //}
 
 
 
@@ -20,9 +20,9 @@ export const GiftExpertApp = () => {
 
       <>
         <h2>GiftExpertApp</h2>
+        
+        <AddCategory setCategories = { setCategories }/>
         <hr />
-
-        <button onClick = {handleAdd}>Agregar</button>
 
         <ol>
             {
